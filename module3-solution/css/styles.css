@@ -63,7 +63,6 @@ body {
    border: 1px solid #C0C0C0;
  }
 #collapsable-nav ul li a { /* Collapsed nav menu text */
-  text-align: center;
   background-color: #F5F5F5;
   color: #FF7F50;
  }
