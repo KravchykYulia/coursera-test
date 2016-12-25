@@ -3,6 +3,7 @@ body {
   font-size: 16px;
   background-color: #DCDCDC;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  padding-top: 50px;
 }
 /** HEADER **/
 #header-nav {
@@ -38,19 +39,23 @@ body {
 #main-content {
 	width: 95%;
 }
-
 #main-content h1{
     margin-bottom: 30px;
 }
-#menu-text {
-	background-color: #C0C0C0;
-}
-#menu-text .col-xs-12 h3 {
+#menu-text  h3 {
 	color: #FF7F50;
 	font-weight: bold;
-	text-align: center;
 }
-
+#chicken, #beef, #sushi {
+  background-color: #C0C0C0;
+  padding: 5px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+/* #chicken, #beef {
+  margin-right: 10px;
+}
+*/
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
 /* Header */
