@@ -1,0 +1,75 @@
+
+body {
+  font-size: 16px;
+  background-color: #DCDCDC;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding-top: 50px;
+}
+/** HEADER **/
+#header-nav {
+  background-color:  #00CED1;
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+//  height: 60px;
+}
+.navbar-brand {
+  padding-top: 15px;
+  margin-bottom: 10px;
+} 
+.navbar-brand h1 { /* Restaurant name */
+  color:  #FF7F50;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-header button.navbar-toggle {
+	top: 5px;
+}
+/* END HEADER */
+
+
+/** PAGE **/
+#main-content h1{
+    margin-bottom: 30px;
+}
+#menu-text {
+	background-color: #C0C0C0;
+}
+#menu-text .col-xs-12 h3 {
+	color: #FF7F50;
+	font-weight: bold;
+	text-align: center;
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+/* Header */
+#collapsable-nav ul { /* Collapsed nav menu text */
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+ }
+#collapsable-nav ul li { /* Collapsed nav menu text */
+   border: 1px solid #C0C0C0;
+ }
+#collapsable-nav ul li a { /* Collapsed nav menu text */
+  text-align: center;
+  background-color: #F5F5F5;
+  color: #FF7F50;
+ }
+/* Main page */
+#menu-text {
+	margin-right: 50px;
+	margin-left: 50px;
+}
+#main-content{
+
+}
+}

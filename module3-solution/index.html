@@ -5,20 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+   
 
     <title>Boostrap Starter Page</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
 <body>
+   <header>
+    <nav id="header-nav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="index.html"><h1>Food, LLC</h1></a>
+          </div>
+          <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div><!-- .navbar-header -->
 
-  <h1>Hello Coursera!</h1>
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav visible-xs">
+            <li class="active">
+              <a href="#chicken">Chicken</a>
+            </li>
+            <li class="active">
+              <a href="#beef">Beef</a>
+            </li>
+            <li class="active">
+              <a href="#sushi">Sushi</a>
+            </li>   
+          </ul>
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+  <div id="main-content" class="container">
+    <h1 class="text-center">Our Menu</h1>
+    <div id="menu-text" class="row">
+      <div id="chicken" class="col-xs-12">
+        <h3>Chicken</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat maximus nunc. Nulla viverra turpis vel turpis convallis dignissim. Proin justo lorem, sagittis vitae ex quis, hendrerit consectetur est. Maecenas volutpat odio at fermentum lobortis. Pellentesque vestibulum eget massa id ullamcorper. Morbi ac finibus libero. Fusce faucibus velit est. In molestie nunc id leo consequat, id mattis ipsum consequat. In sem lacus, aliquam eget bibendum ac, condimentum sit amet tortor. Curabitur condimentum faucibus arcu vitae gravida. Etiam elementum eleifend lectus nec placerat. Ut in massa fringilla, iaculis erat quis, suscipit justo. Proin varius at ante sed iaculis. In ut enim ac nisl hendrerit commodo.
+
+Pellentesque gravida justo ligula, sit amet dictum nisl varius sed. Nunc fermentum elit nec orci malesuada, in suscipit enim rutrum. Maecenas feugiat convallis nibh, feugiat feugiat odio semper vitae. Duis in libero nec sapien gravida tincidunt. Quisque nec mi posuere lorem scelerisque mollis. Aenean mi enim, semper non lacus vitae, ullamcorper tincidunt justo. Phasellus vulputate massa non mi tempor fermentum id euismod diam.
+
+Nulla turpis lorem, lacinia id ultricies nec, porta sagittis orci. Nullam condimentum, tellus nec sollicitudin venenatis, dui metus fermentum ex, id fermentum velit lectus a est. Aliquam tempor mauris vitae pulvinar porta. Mauris in enim sit amet lorem euismod sodales. Vestibulum ut gravida turpis. Nulla et massa tellus. Sed varius tristique pharetra. Nullam laoreet laoreet elit quis maximus. Nulla quis nunc hendrerit dolor feugiat rhoncus. Pellentesque vitae elit sit amet tellus ultricies dapibus ut nec velit. Nam condimentum nisl eget velit fringilla, viverra faucibus leo porta. Duis ligula dui, faucibus in facilisis id, varius a nibh. Praesent ut gravida sapien, sed eleifend felis. Suspendisse at nibh et mauris facilisis interdum sed vel ipsum. Sed tortor nisl, mollis efficitur sapien nec, imperdiet egestas odio. </p>
+      </div>
+      <div id="beef" class="col-xs-12">
+        <h3>Beef</h3>
+        <p>Vestibulum pharetra, enim et tristique euismod, turpis felis iaculis massa, et rhoncus ex enim ut nunc. Phasellus pharetra, tellus at blandit pulvinar, est lectus ultrices erat, at sagittis nisl ante id velit. Maecenas volutpat sed sapien at porta. Nam gravida lobortis elit vel venenatis. In aliquam dui vel condimentum tincidunt. Donec venenatis, arcu et placerat viverra, elit odio vestibulum nunc, sollicitudin tincidunt odio elit sit amet orci. In feugiat est nec mauris interdum elementum. Curabitur suscipit ipsum a elit cursus, sagittis lacinia justo congue. Integer ullamcorper dolor ligula, eu facilisis nunc tincidunt id. Etiam in ultrices odio. In sed lorem ac ante hendrerit pharetra. Cras nulla turpis, congue sed sagittis eu, scelerisque ut felis. Curabitur mattis est vel tincidunt porttitor.
+
+Etiam mattis placerat mi sed laoreet. Etiam ullamcorper et nibh id auctor. Aliquam eget consectetur felis. In in massa dolor. Fusce id erat ut erat porttitor vehicula. Etiam eu arcu pharetra enim dictum dictum ut sed justo. Integer a nunc nunc. Vestibulum pharetra id erat vitae volutpat. Proin consequat magna non sem bibendum, sed eleifend felis porttitor. Aliquam risus ipsum, volutpat sollicitudin nibh eget, euismod vulputate justo. Integer molestie aliquet metus ac commodo. Quisque turpis felis, volutpat a felis in, finibus tempus ante.  </p>
+      </div>
+      <div id="sushi" class="col-xs-12">
+        <h3>Sushi</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio orci, porttitor id elementum nec, tempus in nibh. In et sollicitudin diam. Aliquam vitae ante enim. Quisque lacus mi, auctor sed scelerisque tincidunt, volutpat vel diam. Pellentesque eget quam turpis. Vestibulum blandit ac arcu ac imperdiet. Fusce vitae dolor malesuada, aliquet est sit amet, facilisis turpis.
+
+Sed vitae lectus vitae erat ultricies gravida. Nulla non nisl non purus luctus laoreet ut sit amet lorem. Integer purus nibh, semper sed orci vitae, sodales finibus ante. Sed tristique tincidunt iaculis. Suspendisse a dapibus ligula. Maecenas ultricies massa vel nibh ultricies porttitor. Pellentesque feugiat at augue a dignissim. Integer posuere enim ac orci rutrum, a elementum orci molestie. Fusce a dictum est.
+
+Vivamus vulputate magna id dui sagittis, non porta turpis blandit. Integer consequat, nisi sit amet fringilla lacinia, ex ante congue orci, nec efficitur nisi purus id nulla. Curabitur semper aliquet sem. Etiam luctus vitae diam sit amet vestibulum. Sed commodo leo id orci efficitur, at placerat risus congue. Proin imperdiet sed sapien ac venenatis. Donec bibendum lorem ut viverra malesuada. Donec ex erat, convallis id risus vel, pellentesque lobortis justo. Morbi auctor, velit at cursus dictum, mi erat egestas lorem, quis pellentesque sem metus non neque. Praesent dictum ligula non vehicula fringilla. Duis luctus justo vitae bibendum gravida. Proin tempor massa a augue accumsan, a rhoncus sapien volutpat. Aliquam vitae auctor enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .container -->
+
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-1.11.3.min.js"></script>
