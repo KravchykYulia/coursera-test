@@ -1,11 +1,11 @@
 (function () {
 'use strict';
 
-angular.module('DIApp', [])
-.controller('DIController', DIController);
+angular.module('LunchCheck', [])
+.controller('LunchCheckController', LunchCheckController);
 
-DIController.$inject = ['$scope', '$filter'];
-function DIController($scope, $filter) {
+LunchCheckController.$inject = ['$scope', '$filter'];
+function LunchCheckController($scope, $filter) {
   $scope.name = "Yaakov";
 
   $scope.upper = function () {
