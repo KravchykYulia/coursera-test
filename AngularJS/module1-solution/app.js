@@ -10,7 +10,6 @@ function LunchCheckController($scope) {
 
   $scope.countItems = function () {
     var totalItems=countItemsForString($scope.lunchList);
-    console.log (totalItems);
     return totalItems;
   };
 
