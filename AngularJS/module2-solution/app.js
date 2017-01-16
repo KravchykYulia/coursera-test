@@ -1,82 +1,49 @@
 (function () {
 'use strict';
 
-angular.module('ShoppingListApp', [])
-.controller('ShoppingListController', ShoppingListController)
-.provider('ShoppingList', ShoppingListProvider)
-.config(Config);
+angular.module('ShoppingListCheckOff', [])
+.controller('ToBuyController', ToBuyController)
+.controller('AlreadyBoughtController', AlreadyBoughtController)
+.service('ShoppingListCheckOffService', ShoppingListCheckOffService);
 
-Config.$inject = ['ShoppingListProvider'];
-function Config(ShoppingListProvider) {
-  ShoppingListProvider.defaults.maxItems = 5;
-}
-
-ShoppingListController.$inject = ['ShoppingList'];
-function ShoppingListController(ShoppingList) {
-  var list = this;
-
-  list.items = ShoppingList.getItems();
-
-  list.itemName = "";
-  list.itemQuantity = "";
-
-  list.addItem = function () {
-    try {
-      ShoppingList.addItem(list.itemName, list.itemQuantity);
-    } catch (error) {
-      list.errorMessage = error.message;
-    }
-  };
-
-  list.removeItem = function (itemIndex) {
-    ShoppingList.removeItem(itemIndex);
+// LIST #1 - controller
+ToBuyController.$inject = ['ShoppingListCheckOffService'];
+function ToBuyController(ShoppingListCheckOffService) {
+  var list1 = this;
+  list1.items = ShoppingListCheckOffService.getToBuyItems();
+  list1.removeItem=function (item,itemIdex){
+  ShoppingListCheckOffService.removeItem(item,itemIdex);
   };
 }
 
 
-// If not specified, maxItems assumed unlimited
-function ShoppingListService(maxItems) {
-  var service = this;
+// LIST #2 - controller
+AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
+function AlreadyBoughtController(ShoppingListCheckOffService) {
+  var list2 = this;
+  list2.items = ShoppingListCheckOffService.getBoughtItems();
+};
 
-  // List of shopping items
-  var items = [];
 
-  service.addItem = function (itemName, quantity) {
-    if ((maxItems === undefined) ||
-        (maxItems !== undefined) && (items.length < maxItems)) {
-      var item = {
-        name: itemName,
-        quantity: quantity
-      };
-      items.push(item);
-    }
-    else {
-      throw new Error("Max items (" + maxItems + ") reached.");
-    }
+// Sevice
+ function ShoppingListCheckOffService() {
+   var service = this;
+  // Lists of shopping items "to buy" and "bought"
+  var toBuyItems = [{ name: "cookies", quantity: 10 }, { name: "candies", quantity: 100 }, { name: "chocolate", quantity: 5 }, { name: "cakes", quantity: 2 }, { name: "ice cream", quantity: 1 }];
+  var boughtItems = [];
+
+  service.removeItem = function (item, itemIdex) {
+    toBuyItems.splice(itemIdex, 1);
+    boughtItems.push(item);
   };
 
-  service.removeItem = function (itemIndex) {
-    items.splice(itemIndex, 1);
+  service.getToBuyItems = function () {
+    return toBuyItems;
   };
-
-  service.getItems = function () {
-    return items;
+  service.getBoughtItems = function () {
+    return boughtItems;
   };
 }
 
-
-function ShoppingListProvider() {
-  var provider = this;
-
-  provider.defaults = {
-    maxItems: 100
-  };
-
-  provider.$get = function () {
-    var shoppingList = new ShoppingListService(provider.defaults.maxItems);
-
-    return shoppingList;
-  };
-}
 
 })();
