@@ -26,7 +26,9 @@ function LunchCheckController($scope) {
   
    $scope.displayMessage = function() {
    	var condition=$scope.countItems();
-    if (condition==0) {$scope.message="Please enter data first"}
+    if (condition==0) {$scope.message="Please enter data first";
+                      button.style.backgroundColor='#FF7F50';
+                    }
      	else if (condition<=3) {$scope.message="Enjoy!"}
      		else {$scope.message="Too much"}
    };
