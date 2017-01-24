@@ -1,0 +1,12 @@
+<div>
+<h3>The best menu for you!</h3>
+{{nidc.found}}
+<!-- <ul>
+  <li ng-repeat="item in nidc.found"> <!--foundItems-->
+    <!-- ({{ item.short_name}}) {{ item.name }}: {{item.description}}-->
+    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+  <!--</li>
+</ul>  -->
+<div class="error" ng-if="list.foundSearchItems()">Nothing found!</div> 
+
+</div>

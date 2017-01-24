@@ -8,7 +8,7 @@
  
  function FoundItemsDirective() {
   var ddo = {
-    templateUrl: 'itemsloaderindicatortemplate.html',
+    templateUrl:'foundItems.html'//,
     // scope: {
     //      items: '<',
     //      onRemove: '&'
