@@ -8,22 +8,32 @@
  
  function FoundItemsDirective() {
   var ddo = {
-    templateUrl:'foundItems.html'//,
-    // scope: {
-    //      items: '<',
-    //      onRemove: '&'
-    // }
-  };
+    templateUrl:'foundItems.html',
+     scope: {
+          found: '<',
+          onRemove: '&'
+     }
+    controller: FoundItemsDirectiveController,
+    controllerAs: 'list',
+    bindToController: true};
   return ddo;
  };
+ function FoundItemsDirectiveController() {
+  var list = this;
+
+  list.foundSearchItems = function () {
+      if (list.found.length===0) {return true;}
+      else {return false}
+    };
+}
 
 NarrowItDownController.$inject = ['MenuSearchService'];
  function NarrowItDownController(MenuSearchService) {
-   var nidc = this;
-   nidc.searchTerm="";
-   nidc.found=function(){
-   MenuSearchService.getMatchedMenuItems(nidc.searchTerm);}; /**/
-   nidc.removeItem = function (itemIndex) {
+   var list = this;
+   list.searchTerm="";
+   list.found=function(){
+   MenuSearchService.getMatchedMenuItems(list.searchTerm);}; 
+   list.removeItem = function (itemIndex) {
     MenuSearchService.removeItem(itemIndex);};
  };
 
