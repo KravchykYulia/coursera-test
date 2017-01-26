@@ -12,12 +12,13 @@
      scope: {
           found: '<',
           onRemove: '&'
-     }
+     },
     controller: FoundItemsDirectiveController,
     controllerAs: 'list',
     bindToController: true};
   return ddo;
  };
+
  function FoundItemsDirectiveController() {
   var list = this;
 
