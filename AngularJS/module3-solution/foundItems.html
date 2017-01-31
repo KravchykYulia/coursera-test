@@ -1,12 +1,12 @@
 <div>
 <h3>The best menu for you!</h3>
-
+<button class="btn">Don't want this one 1!</button>
  <ul>
   <li ng-repeat="item in list.foundItems"> <!--foundItems-->
      ({{item.short_name}}) {{item.name}}: {{item.description}}
-    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+    <button>Don't want this one 2!</button>
   </li>
 </ul>  
-<div class="error" ng-if="list.foundSearchItems()">Nothing found!</div> 
+<!-- <div class="error" ng-if="list.foundSearchItems()">Nothing found!</div>   ng-click="list.onRemove({index: $index});"-->
 
 </div>

@@ -33,12 +33,11 @@ NarrowItDownController.$inject = ['MenuSearchService'];
    var list = this;
  //  list.searchTerm="";
    list.found= function(){
-   MenuSearchService.getMatchedMenuItems(list.searchTerm);
-   list.foundItems=foundItems;
-   //console.log (foundItems); //??????????
+   MenuSearchService.getMatchedMenuItems(list.searchTerm).then(function(response){list.foundItems=response;});
+   //console.log (list.foundItems); //??????????
    }; 
    list.removeItem = function (itemIndex) {
-    MenuSearchService.removeItem(itemIndex);};
+    MenuSearchService.removeItem(itemIndex)};
    };
 
 // NarrowItDownController.$inject = ['MenuSearchService'];
