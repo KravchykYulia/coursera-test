@@ -10,7 +10,7 @@
   var ddo = {
     templateUrl:'foundItems.html',
      scope: {
-          foundItems: '<',
+          found: '<',
           onRemove: '&'
      },
     controller: FoundItemsDirectiveController,
@@ -22,11 +22,11 @@
  function FoundItemsDirectiveController() {
   var list = this;
 
-  list.foundSearchItems = function () {
-      if (list.foundItems.length==0) {return true;}
-      else {return false;}
-    };
-}
+//   list.foundSearchItems = function () {
+//       if (list.found.length==0) {return true;}
+//       else {return false;}
+//     };
+};
 
 NarrowItDownController.$inject = ['MenuSearchService'];
  function NarrowItDownController(MenuSearchService) {
@@ -36,8 +36,9 @@ NarrowItDownController.$inject = ['MenuSearchService'];
    MenuSearchService.getMatchedMenuItems(list.searchTerm).then(function(response){list.foundItems=response;});
    }; 
    list.removeItem = function (itemIndex) {
-    MenuSearchService.removeItem(itemIndex)};
+    MenuSearchService.removeItem(list.foundItems, itemIndex)};
    };
+
 
 // NarrowItDownController.$inject = ['MenuSearchService'];
 //  function NarrowItDownController(MenuSearchService) {
@@ -90,8 +91,8 @@ NarrowItDownController.$inject = ['MenuSearchService'];
  //      service.getMatchedMenuItems = function (searchTerm) {
         
  //      };
-      service.removeItem = function (itemIndex) {
-         foundItems.splice(itemIndex, 1);};
+      service.removeItem = function (items,itemIndex) {
+         items.splice(itemIndex, 1);};
  };
 
 })();

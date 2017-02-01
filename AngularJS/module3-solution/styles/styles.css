@@ -50,6 +50,13 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
-#found-items h3 {
+.found-menu {
+  position: absolute;
+  top: 150px;
+}
+.found-menu h3 {
+  color: #800000;
+}
+.found-menu .error {
   color: #800000;
 }
