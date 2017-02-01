@@ -34,7 +34,6 @@ NarrowItDownController.$inject = ['MenuSearchService'];
  //  list.searchTerm="";
    list.found= function(){
    MenuSearchService.getMatchedMenuItems(list.searchTerm).then(function(response){list.foundItems=response;});
-   //console.log (list.foundItems); //??????????
    }; 
    list.removeItem = function (itemIndex) {
     MenuSearchService.removeItem(itemIndex)};
